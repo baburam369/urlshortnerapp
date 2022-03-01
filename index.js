@@ -57,6 +57,7 @@ app.get("/:shorturl", (req, res) => {
   });
 });
 
-app.listen(8080, (err) => {
+let port = process.env.PORT||"3000;"
+app.listen(port, (err) => {
   if (!err) return console.log("Server started");
 });
